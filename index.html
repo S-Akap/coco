@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>COCO | 卓展2022</title>
+  <meta name="description" content="卓展2022 サービス開発卓「COCO」の特設サイトです。" />
+
+  <!-- ogp -->
+  <meta property="og:url" content="https://coco-takuten2022.netlify.app/" />
+  <meta property="og:title" content="卓展2022" />
+  <meta property="og:image" content="https://coco-takuten2022.netlify.app/assets/images/coco_logo.png" />
+  <meta property="og:description" content="卓展2022 サービス開発卓「COCO」の特設サイトです。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="卓展2022" />
+  <meta name="twitter:card" content="summary" />
+
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon_io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon_io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon_io/favicon-16x16.png" />
+  <link rel="manifest" href="./assets/favicon_io/site.webmanifest" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <!-- フォント -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Noto Sans JP -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- Quicksand -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="loader">
+    <div class="loader_logo">
+      <img src="./assets/images/coco_logo.svg" alt="サービスロゴ">
+    </div>
+  </div>
+  <style>
+    .loader {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      z-index: 1000;
+
+      background-color: #fff;
+    }
+
+    .loader_logo {
+      width: max(20vw, 20vh);
+      height: max(20vw, 20vh);
+    }
+
+
+    .loader_logo>img {
+      width: 100%;
+      height: 100%;
+      animation: loader-fadeIn 1s forwards;
+    }
+
+    .loader.loaded {
+      animation: loader-fadeOut 1s forwards;
+    }
+
+    @keyframes loader-fadeOut {
+      from {
+        opacity: 1;
+      }
+
+      to {
+        display: none;
+        opacity: 0;
+        z-index: -1000;
+      }
+    }
+
+    @keyframes loader-fadeIn {
+      from {
+        opacity: 0;
+
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+  <script>
+    const loader = document.querySelector(".loader");
+    window.setTimeout(function () {
+      loader.classList.toggle('loaded');
+    }, 2 * 1000);
+  </script>
+
+
+
+  <header class="header">
+    <h1 class="header-logo">
+      <a href="#top">
+        <img src="./assets/images/coco_logo.svg" alt="coco ロゴ" />
+      </a>
+    </h1>
+    <nav id="nav">
+      <ul class="nav-list">
+        <li class="list-item">
+          <a href="#motto">Motto</a>
+        </li>
+        <li class="list-item">
+          <a href="#flow">Flow</a>
+        </li>
+        <li class="list-item">
+          <a href="#works">Works</a>
+        </li>
+        <li class="list-item">
+          <a href="#members">Members</a>
+        </li>
+        <li class="list-item">
+          <a href="#takumimi">Takumimi</a>
+        </li>
+        <li class="list-item">
+          <a href="#goods">Goods</a>
+        </li>
+        <li class="list-item takuten">
+          <a href="https://geikou-takuten.com/" target="_blank" rel="noopener noreferrer">Takuten2022</a>
+        </li>
+      </ul>
+
+      <!-- menu-modal-->
+      <div class="menu-modal">
+        <div class="menu-modal-contents">
+          <ul>
+            <li>
+              <a href="#motto">COCO’s Motto</a>
+            </li>
+            <li>
+              <a href="#flow">UX Flow</a>
+            </li>
+            <li>
+              <a href="#works">Works</a>
+            </li>
+            <li>
+              <a href="#members">Members</a>
+            </li>
+            <li>
+              <a href="#takumimi">Takumimi</a>
+            </li>
+            <li>
+              <a href="#goods">Goods</a>
+            </li>
+          </ul>
+          <a class="linkout" target="_blank" rel="noopener noreferrer" href="https://geikou-takuten.com/">卓展サイトTOPへ
+          </a>
+        </div>
+      </div>
+      <div class="menu-modal-overlay"></div>
+      <!-- menu-modal -->
+
+      <!-- menu-btn -->
+      <button class="menu-btn active">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <!-- menu-btn -->
+    </nav>
+  </header>
+  <main class="main">
+    <section class="section" id="top">
+      <div class="top-caption">
+        <div class="top-title">
+          <h1 class="title">
+            みんなで楽しく<br />
+            <span class="font-color-1">〇</span><span class="font-color-2">〇</span><span
+              class="font-color-3">〇</span><span class="font-color-4">〇</span>なサービスを
+          </h1>
+          <p class="sub-title">Takuten2022 ServiceDesign</p>
+        </div>
+        <a href="#works">
+          <div class="top-works-link">作品を見てみる</div>
+        </a>
+      </div>
+
+      <div class="top-image">
+        <img src="./assets/images/top.jpg" alt="トップイメージ" />
+      </div>
+
+      <a href="#motto" class="scroll">
+        <p>Scroll</p>
+      </a>
+    </section>
+
+    <section class="section" id="motto">
+      <div class="summary">
+        <h1 class="section-title">COCO's Motto</h1>
+      </div>
+      <div class="motto-container">
+        <h2>
+          みんなで楽しく<br class="br-sp" />話しながら<br class="br-lg" />
+          <span class="font-color-1">〇</span><span class="font-color-2">〇</span><span class="font-color-3">〇</span><span
+            class="font-color-4">〇</span>な<br class="br-sp" />サービスを考えること
+        </h2>
+        <p class="description-lg">
+          COCOはWebサイト制作組とUIデザイン制作組で共同で<br />
+          一つのサービスを考えるグループ制作の卓です。<br />
+          グループ内でもグループ外でもお互いにフィードバックし合うことで、<br />
+          より良いユーザー体験を意識したサービス作りを目指します。<br />
+          最終的な成果物は主にアプリのプロトタイプと<br />
+          サービスのWEBサイトになります。
+        </p>
+        <p class="description-sp">
+          COCOはWebサイト制作組と<br />
+          UIデザイン制作組で共同で一つの<br />
+          サービスを考えるグループ制作の卓です。<br />
+          お互いにフィードバックし合うことで、<br />
+          より良いユーザー体験を意識した<br />
+          サービス作りを目指します。
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="flow">
+      <div class="summary">
+        <h1 class="section-title">UX Flow</h1>
+        <p class="section-description">
+          UXデザインプロセスを用いてグループでアイデアを練りました！<br />
+          ここではサービスの体験価値が生まれるまで行った過程を説明します
+        </p>
+      </div>
+      <ol class="flow-list">
+        <li class="list-item flow1">
+          <div class="flow-img"></div>
+          <div class="flow-caption-container">
+            <div class="flow-caption">
+              <h2 class="flow-title">
+                <p>UX FLOW</p>
+                <p class="title-num">01</p>
+              </h2>
+              <p class="flow-summary">アイデアの発散</p>
+              <p class="flow-description">
+                ブレインストーミングという手法を用いてみんなでキーワードに対するイメージや問題などを出し合ってアイデア出しを行いました。出てきた付箋の数はなんと30分で約400枚!!!
+              </p>
+            </div>
+          </div>
+        </li>
+        <li class="list-item flow2">
+          <div class="flow-img"></div>
+          <div class="flow-caption-container">
+            <div class="flow-caption">
+              <h2 class="flow-title">
+                <p>UX FLOW</p>
+                <p class="title-num">02</p>
+              </h2>
+              <p class="flow-summary">ユーザー調査</p>
+              <p class="flow-description">
+                アイデアに対して予想で制作するのではなく、根拠を持った戦略を立てるために、アンケート手法による定量調査とインタビューを行いました。<br />
+                ユーザーがどんな悩みを抱えているのか探ります！
+              </p>
+            </div>
+          </div>
+        </li>
+        <li class="list-item flow3">
+          <div class="flow-img"></div>
+          <div class="flow-caption-container">
+            <div class="flow-caption">
+              <h2 class="flow-title">
+                <p>UX FLOW</p>
+                <p class="title-num">03</p>
+              </h2>
+              <p class="flow-summary">調査分析/価値マップ作成</p>
+              <p class="flow-description">
+                KA法という手法でインタビューの結果を分析し、ユーザーが求めている本質的なニーズを考えどんなアイデアであれば解決になるのか考えました。
+              </p>
+            </div>
+          </div>
+        </li>
+        <li class="list-item flow4">
+          <div class="flow-img"></div>
+          <div class="flow-caption-container">
+            <div class="flow-caption">
+              <h2 class="flow-title">
+                <p>UX FLOW</p>
+                <p class="title-num">04</p>
+              </h2>
+              <p class="flow-summary">課題決定/ペルソナ作成</p>
+              <p class="flow-description">
+                いままでの調査でわかったことをもとにペルソナとユーザーの利用ストーリーの作成をしました。<br />
+                グループ内で共通イメージを持ち、より明確なアイデア出しに繋げました。
+              </p>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section" id="works">
+      <div class="summary">
+        <h1 class="section-title">Works</h1>
+        <p class="section-description">
+          各チームでサービスについての<br />
+          アプリのプロトタイプとWebサイトを制作しました。<br />
+          ※Webサイトに関してはPCでの閲覧をおすすめします！
+        </p>
+      </div>
+
+      <ul class="works-list">
+        <li class="list-item huekinori">
+          <a href="./products/huekinori/index.html" class="card-link">
+            <img class="card-image" src="./assets/images/ieinu_icon.svg" alt="thumbnail" />
+            <h2 class="group-name">teamふえきのり</h2>
+            <h2 class="service-name">いえいぬ</h2>
+          </a>
+        </li>
+        <li class="list-item pikkoma">
+          <a href="./products/pikkoma/index.html" class="card-link">
+            <img class="card-image" src="./assets/images/moglog_icon.svg" alt="thumbnail" />
+            <h2 class="group-name">teamピッコマ</h2>
+            <h2 class="service-name">moglog</h2>
+          </a>
+        </li>
+        <li class="list-item agemonzu">
+          <a href="./products/agemonzu/index.html" class="card-link">
+            <img class="card-image" src="./assets/images/fiiim_icon.svg" alt="thumbnail" />
+            <h2 class="group-name">team揚げもンズ</h2>
+            <h2 class="service-name">fiiim</h2>
+          </a>
+        </li>
+        <li class="list-item itidodcom">
+          <a href="./products/itidodcom/index.html" class="card-link">
+            <img class="card-image" src="./assets/images/pure-fit_icon.svg" alt="thumbnail" />
+            <h2 class="group-name">teamいち</h2>
+            <h2 class="service-name">PURE-FIT</h2>
+          </a>
+        </li>
+        <li class="list-item touhuya">
+          <a href="./products/touhuya/index.html" class="card-link">
+            <img class="card-image" src="./assets/images/chattabi_icon.svg" alt="thumbnail" />
+            <h2 class="group-name">teamとうふや</h2>
+            <h2 class="service-name">chattabi</h2>
+          </a>
+        </li>
+        <li class="list-item parukuru">
+          <a href="./products/parukuru/index.html" class="card-link">
+            <img class="card-image" src="./assets/images/monotabi_icon.svg" alt="thumbnail" />
+            <h2 class="group-name">teamぱるくる</h2>
+            <h2 class="service-name">モノタビ</h2>
+          </a>
+        </li>
+        <li class="list-item daigokouen">
+          <a href="./products/daigokouen/index.html" class="card-link">
+            <img class="card-image" src="./assets/images/16memo_icon.svg" alt="thumbnail" />
+            <h2 class="group-name">teamなかよし第五公園</h2>
+            <h2 class="service-name">16memo</h2>
+          </a>
+        </li>
+        <li class="list-item hourensou">
+          <a href="./products/hourensou/index.html" class="card-link">
+            <img class="card-image" src="./assets/images/hourensou.jpg" alt="thumbnail" />
+            <h2 class="group-name">teamくじら</h2>
+            <h2 class="service-name">くじら</h2>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section" id="members">
+      <div class="summary">
+        <h1 class="section-title">Members</h1>
+        <p class="section-description">
+          COCOの個性あふれるメンバーたちの紹介です！
+        </p>
+      </div>
+
+      <div id="team">
+        <p>team</p>
+        <p class="team-name">ふえきのり</p>
+      </div>
+      <div class="swiper-container carousel-lg">
+        <div class="swiper mySwiper-lg">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="swiper-contents">
+                <div class="member">
+                  <div class="course">
+                    <p>Web</p>
+                  </div>
+                  <img class="member-img" src="./assets/images/members/Tumuji.jpg" alt="thumbnail" loading="lazy" />
+                  <p class="member-caption">
+                    2Nつむじ<br />
+                    土居夏緒
+                  </p>
+                </div>
+                <div class="member">
+                  <div class="course">
+                    <p>Web</p>
+                  </div>
+                  <img class="member-img" src="./assets/images/members/misen.jpg" alt="thumbnail" loading="lazy" />
+                  <p class="member-caption">
+                    1Mみーせん<br />
+                    香服部寿
+                  </p>
+                </div>
+                <div class="member">
+                  <div class="course">
+                    <p>UI</p>
+                  </div>
+                  <img class="member-img" src="./assets/images/members/bon.jpg" alt="thumbnail" loading="lazy" />
+                  <p class="member-caption">
+                    3Nぼん<br />
+                    井田帆南
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-contents">
+                <div class="member">
+                  <div class="course">
+                    <p>Web</p>
+                  </div>
+                  <img class="member-img" src="./assets/images/members/tari.jpg" alt="thumbnail" loading="lazy" />
+                  <p class="member-caption">
+                    3Mたりー<br />
+                    伊藤杏
+                  </p>
+                </div>
+                <div class="member">
+                  <div class="course">
+                    <p>Web</p>
+                  </div>
+                  <img class="member-img" src="./assets/images/members/toripi.jpg" alt="thumbnail" loading="lazy" />
+                  <p class="member-caption">
+                    3Mとりぴ<br />
+                    松永玲奈
+                  </p>
+                </div>
+                <div class="member">
+                  <div class="course">
+                    <p>UI</p>
+                  </div>
+                  <img class="member-img" src="./assets/images/members/nekkoara.jpg" alt="thumbnail" loading="lazy" />
+                  <p class="member-caption">
+                    3Mネッコアラ<br />
+                    福富千陽
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-contents">
+                <div class="member">
+                  <div class="course">
+                    <p>Web</p>
+                  </div>
+                  <img class="member-img" src="./assets/images/members/karaage.jpg" alt="thumbnail" loading="lazy" />
+                  <p class="member-caption">
+                    3Mからあげ<br />
+                    杉山友梨
+                  </p>
+                </div>
+                <div class="member">
+                  <div class="course">
+                    <p>Web</p>
+                  </div>
+                  <img class="member-img" src="./assets/images/members/suyon.jpg" alt="thumbnail" loading="lazy" />
+                  <p class="member-caption">
+                    3Mスヨン<br />
+                    中山愛唯
+                  </p>
+                </div>
+                <div class="member">
+                  <div class="course">
+                    <p>UI</p>
+                  </div>
+                  <img class="member-img" src="./assets/images/members/syaka.jpg" alt="thumbnail" loading="lazy" />
+                  <p class="member-caption">
+                    3Mシャカ<br />
+                    中村太哉
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-contents">
+                <div class="member">
+                  <div class="course">
+                    <p>Web</p>
+                  </div>
+                  <img class="member-img" src="./assets/images/members/ich.jpg" alt="thumbnail" loading="lazy" />
+                  <p class="member-caption">
+                    2Mいち<br />
+                    安田健人
+                  </p>
+                </div>
+                <div class="member leaders">
+                  <div class="course">
+                    <p>support</p>
+                  </div>
+                  <img class="member-img" src="./assets/images/members/lawsom_ich.jpg" alt="thumbnail" loading="lazy" />
+                  <p class="member-caption">
+                    4Mの卓長たち<br />
+                    ローソン他
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-contents">
+                <div class="member">
+                  <div class="course">
+                    <p>Web</p>
+                  </div>
+                  <img class="member-img" src="./assets/images/members/tometo.jpg" alt="thumbnail" loading="lazy" />
+                  <p class="member-caption">
+                    3Mとめ<br />
+                    加賀美果歩
+                  </p>
+                </div>
+                <div class="member">
+                  <div class="course">
+                    <p>Web</p>
+                  </div>
+                  <img class="member-img" src="./assets/images/members/nigi.jpg" alt="thumbnail" loading="lazy" />
+                  <p class="member-caption">
+                    1Mにぎ<br />
+                    肥後琴楓
+                  </p>
+                </div>
+                <div class="member">
+                  <div class="course">
+                    <p>UI</p>
+                  </div>
+                  <img class="member-img" src="./assets/images/members/syakotu.jpg" alt="thumbnail" loading="lazy" />
+                  <p class="member-caption">
+                    1M尺骨<br />
+                    松田耀太朗
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-contents">
+                <div class="member">
+                  <div class="course">
+                    <p>Web</p>
+                  </div>
+                  <img class="member-img" src="./assets/images/members/urayasuland.jpg" alt="thumbnail"
+                    loading="lazy" />
+                  <p class="member-caption">
+                    1N浦安ランド<br />
+                    竹内こころ
+                  </p>
+                </div>
+                <div class="member">
+                  <div class="course">
+                    <p>UI</p>
+                  </div>
+                  <img class="member-img" src="./assets/images/members/urano.jpg" alt="thumbnail" loading="lazy" />
+                  <p class="member-caption">
+                    3Mうらの<br />
+                    上村那南果
+                  </p>
+                </div>
+                <div class="member">
+                  <div class="course">
+                    <p>UI</p>
+                  </div>
+                  <img class="member-img" src="./assets/images/members/nanako.jpg" alt="thumbnail" loading="lazy" />
+                  <p class="member-caption">
+                    1Nトウ・エイ<br />
+                    森井菜那子
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-contents">
+                <div class="member app">
+                  <div class="course">
+                    <p>Front<br />end</p>
+                  </div>
+                  <img class="member-img" src="./assets/images/members/ederin.jpg" alt="thumbnail" loading="lazy" />
+                  <p class="member-caption">
+                    3Mえでりん<br />
+                    吉田果歩
+                  </p>
+                </div>
+                <div class="member app">
+                  <div class="course">
+                    <p>Back<br />end</p>
+                  </div>
+                  <img class="member-img" src="./assets/images/members/peyo.jpg" alt="thumbnail" loading="lazy" />
+                  <p class="member-caption">
+                    3Mぺよ<br />
+                    磯野圭希
+                  </p>
+                </div>
+                <div class="member">
+                  <div class="course">
+                    <p>Web</p>
+                  </div>
+                  <img class="member-img" src="./assets/images/members/jiru.jpg" alt="thumbnail" loading="lazy" />
+                  <p class="member-caption">
+                    3Mジル<br />
+                    石川弥幸
+                  </p>
+                </div>
+                <div class="member">
+                  <div class="course">
+                    <p>UI</p>
+                  </div>
+                  <img class="member-img" src="./assets/images/members/morikoro.jpg" alt="thumbnail" loading="lazy" />
+                  <p class="member-caption">
+                    3Mもりころ<br />
+                    永田芽生
+                  </p>
+                </div>
+                <div class="member">
+                  <div class="course">
+                    <p>UI</p>
+                  </div>
+                  <img class="member-img" src="./assets/images/members/sanpin.jpg" alt="thumbnail" loading="lazy" />
+                  <p class="member-caption">
+                    3Mさんぴん<br />
+                    三品佳穂
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-contents">
+                <div class="member leaders">
+                  <div class="course">
+                    <p>support</p>
+                  </div>
+                  <img class="member-img" src="./assets/images/members/kureka_kujira.jpg" alt="thumbnail"
+                    loading="lazy" />
+                  <p class="member-caption">
+                    4Mくれか<br />
+                    岡美咲
+                  </p>
+                </div>
+                <div class="member installation">
+                  <div class="course">
+                    <p>insta<br />llation</p>
+                  </div>
+                  <img class="member-img" src="./assets/images/members/hourensou.jpg" alt="thumbnail" loading="lazy" />
+                  <p class="member-caption">
+                    1Nほうれん草<br />
+                    八十田実優
+                  </p>
+                </div>
+                <div class="member leaders">
+                  <div class="course">
+                    <p>support</p>
+                  </div>
+                  <img class="member-img" src="./assets/images/members/ramuko_kujira.jpg" alt="thumbnail"
+                    loading="lazy" />
+                  <p class="member-caption">
+                    4Mラムこ<br />
+                    中村純実
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-contents">
+                <div class="member">
+                  <div class="course">
+                    <p>Web</p>
+                  </div>
+                  <img class="member-img" src="./assets/images/members/lawson.jpg" alt="thumbnail" loading="lazy" />
+                  <p class="member-caption">
+                    4Mローソン<br />
+                    八森聖人
+                  </p>
+                </div>
+                <div class="member">
+                  <div class="course">
+                    <p>Web</p>
+                  </div>
+                  <img class="member-img" src="./assets/images/members/hoihoi.jpg" alt="thumbnail" loading="lazy" />
+                  <p class="member-caption">
+                    3Mホイホイ<br />
+                    赤堀祥
+                  </p>
+                </div>
+                <div class="member">
+                  <div class="course">
+                    <p>Web</p>
+                  </div>
+                  <img class="member-img" src="./assets/images/members/barihu.jpg" alt="thumbnail" loading="lazy" />
+                  <p class="member-caption">
+                    3Mばりふ<br />
+                    杉原光
+                  </p>
+                </div>
+                <div class="member">
+                  <div class="course">
+                    <p>UI</p>
+                  </div>
+                  <img class="member-img" src="./assets/images/members/menmi.jpg" alt="thumbnail" loading="lazy" />
+                  <p class="member-caption">
+                    4Mめんみ<br />
+                    松下杏子
+                  </p>
+                </div>
+                <div class="member">
+                  <div class="course">
+                    <p>UI</p>
+                  </div>
+                  <img class="member-img" src="./assets/images/members/kureka_taku.jpg" alt="thumbnail"
+                    loading="lazy" />
+                  <p class="member-caption">
+                    4Mくれか<br />
+                    岡美咲
+                  </p>
+                </div>
+                <div class="member">
+                  <div class="course">
+                    <p>UI</p>
+                  </div>
+                  <img class="member-img" src="./assets/images/members/ramuko_taku.jpg" alt="thumbnail"
+                    loading="lazy" />
+                  <p class="member-caption">
+                    4Mラムこ<br />
+                    中村純実
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+
+      <div class="swiper-container carousel-sp">
+        <div class="swiper mySwiper-sp">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="swiper-contents">
+                <img loading="lazy" src="./assets/images/members/huekinori.jpg" alt="ふえきのり" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-contents">
+                <img loading="lazy" src="./assets/images/members/pikkoma.jpg" alt="ピッコマ" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-contents">
+                <img loading="lazy" src="./assets/images/members/agemonzu.jpg" alt="揚げもンズ" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-contents">
+                <img loading="lazy" src="./assets/images/members/iti.jpg" alt="いち" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-contents">
+                <img loading="lazy" src="./assets/images/members/touhuya.jpg" alt="とうふや" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-contents">
+                <img loading="lazy" src="./assets/images/members/parukuru.jpg" alt="ぱるくる" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-contents">
+                <img loading="lazy" src="./assets/images/members/daigokoen.jpg" alt="なかよし第五公園" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-contents">
+                <img loading="lazy" src="./assets/images/members/kuzira.jpg" alt="くじら" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-contents">
+                <img loading="lazy" src="./assets/images/members/yonensei.jpg" alt="卓長とサポーター" />
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="takumimi">
+      <div class="summary">
+        <h1 class="section-title">Takumimi</h1>
+        <p class="section-description">
+          卓長のくれかとローソンがCOCOのコンセプトや作品についてトークしています。<br />
+          作品を見ながら、ぜひお聴きください！
+        </p>
+      </div>
+      <iframe style="border-radius: 12px"
+        src="https://open.spotify.com/embed/episode/2LHOzYae8M4MtScqV2Q858?utm_source=generator" width="80%"
+        height="200px" frameborder="0" allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+      </iframe>
+    </section>
+
+    <section class="section" id="goods">
+      <div class="summary">
+        <h1 class="section-title">Goods</h1>
+        <p class="section-description">
+          COCOのロゴを使ったかわいいグッズを販売しています。<br />
+          ぜひご購入ください！
+        </p>
+      </div>
+
+      <a href="https://suzuri.jp/70379770" target="_blank" rel="noopener noreferrer">
+        <div class="goods-link">グッズを見る</div>
+      </a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="https://geikou-takuten.com/" class="takuten2022" target="_blank" rel="noopener noreferrer">
+      <img src="./assets/images/takuten2022_logo.svg" alt="卓展2022 ロゴ" />
+      <p>卓展サイトTOPへ</p>
+    </a>
+
+    <p>
+      Takuten2022<br />
+      ServiceDesign
+    </p>
+  </footer>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

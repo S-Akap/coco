@@ -1,0 +1,283 @@
+@charset "utf-8";
+
+/* base */
+:root{
+    --loader-time: 1.0s;
+    --loading-time: 1.0s;
+}
+
+@keyframes fadeInAnimation {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeUpAnimation {
+    from {opacity: 0;transform: translateY(50%);}
+    to {opacity: 1;transform: translateY(0);}
+}
+
+@keyframes fadeDownAnimation {
+    from {opacity: 0;transform: translateY(-50%);}
+    to {opacity: 1;transform: translateY(0%);}
+}
+
+@keyframes fadeLeftAnimation {
+    from {opacity: 0;transform: translateX(-50%);}
+    to {opacity: 1;transform: translateX(0%);}
+}
+
+@keyframes fadeRightAnimation {
+    from {opacity: 0;transform: translateX(50%);}
+    to {opacity: 1;transform: translateX(0%);}
+}
+
+@keyframes zoomInAnimation{
+    from {transform: scale(1);}
+    to {transform: scale(1.2);}
+}
+
+@keyframes buttonImageHover {
+    0% {opacity: 1;}
+    100% {opacity: 1;}
+}
+
+@keyframes loadingAnimation {
+    0% {transform: scale(1);}
+    25% {transform: scale(1.5);}
+    50% {transform: scale(1);}
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.btn{
+    transition: 0.5s;
+}
+
+.btn:hover{
+    color: var(--color-button);
+    background: var(--color-background);
+}
+
+.btn:hover::after{
+    animation-name: buttonImageHover;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    background-color: var(--color-button);
+}
+
+/* loader */
+#loader {
+    transition: var(--loader-time);
+    transition-delay: var(--loading-time);
+}
+
+#loader.fin {
+    opacity: 0;
+    z-index: -1000;
+}
+
+#loading {
+    transition: var(--loading-time);
+}
+
+#loading.fin {
+    transform: scale(5, 5);
+    opacity: 0;
+}
+
+.loading-ellipse {
+    animation: loadingAnimation 1s ease-in-out 2;
+}
+
+.loading-ellipse.fin {
+    animation: none;
+}
+
+.loading-ellipse:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.loading-ellipse:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.loading-ellipse:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.loading-ellipse:nth-child(4) {
+    animation-delay: 0.45s;
+}
+
+/* header */
+.nav-li>a::after {
+    transform: scale(0, 1);
+    transition: 0.3s;
+}
+
+.nav-li>a:hover::after {
+    transform: scale(1, 1);
+}
+
+.menu-btn span {
+    transition: all 0.5s;
+}
+
+/* main top */
+.hero-img,
+.hero-img::before,
+.hero-img::after {
+    opacity: 0;
+}
+
+.hero-img.fade-up-animation,
+.hero-img.fade-up-animation::before,
+.hero-img.fade-up-animation::after {
+    animation-name: fadeUpAnimation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.hero-img.fade-up-animation::before {
+    animation-delay: 0.2s;
+}
+
+.hero-img.fade-up-animation::after {
+    animation-delay: 0.4s;
+}
+
+
+#motto-scroll-img>path,
+#motto-scroll-img>circle {
+    transition: 0.3s;
+}
+
+#motto-scroll-img:hover>path {
+    fill: var(--color-background);
+}
+
+#motto-scroll-img:hover>circle {
+    fill: var(--color-button);
+}
+
+/* main motto */
+
+#motto>.section-content::before,
+#motto>.section-content::after {
+    opacity: 0;
+}
+
+#motto>.section-content.fade-up-animation::before,
+#motto>.section-content.fade-up-animation::after{
+    animation-name: fadeUpAnimation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+#motto>.section-content.fade-up-animation::after{
+    animation-delay: 0.2s;
+}
+
+/* main flow */
+
+.flow-img {
+    opacity: 0;
+}
+
+.fade-in-animation.flow-img {
+    animation-name: fadeInAnimation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.flow-caption {
+    opacity: 0;
+}
+
+.flow-caption {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.3s;
+}
+
+.flow-li:nth-child(2n) .fade-right-animation.flow-caption {
+    animation-name: fadeRightAnimation;
+}
+
+.flow-li:nth-child(2n+1) .fade-left-animation.flow-caption {
+    animation-name: fadeLeftAnimation;
+}
+
+/* main works */
+
+.work-link img{
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+}
+
+.work-link:hover img{
+    transform: scale(1.2);
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 950px){
+    /* header */
+
+    .menu-btn.active span:nth-child(1) {
+        transform: translateY(calc((45px - (3px * 2)) / 2)) rotate(-45deg);
+    }
+
+    .menu-btn.active span:nth-child(2) {
+        opacity: 0;
+        height: 0;
+    }
+
+    .menu-btn.active span:nth-child(3) {
+        transform: translateY(calc((45px - (3px * 2)) / -2)) rotate(45deg);
+    }
+
+    .nav-overlay.active {
+        display: initial;
+    }
+
+    .nav-list {
+        transition: 0.5s;
+        opacity: 0;
+    }
+
+    .nav-list.active {
+        transform: translateY(0%);
+        opacity: 1;
+        pointer-events: initial;
+    }
+
+}
+
+@media screen and (max-width: 450px){
+    /* header */
+
+    .menu-btn.active span:nth-child(1) {
+        transform: translateY(calc((20px - (2px * 2)) / 2)) rotate(-45deg);
+    }
+
+    .menu-btn.active span:nth-child(2) {
+        opacity: 0;
+        height: 0;
+    }
+
+    .menu-btn.active span:nth-child(3) {
+        transform: translateY(calc((20px - (2px * 2)) / -2)) rotate(45deg);
+    }
+
+    /* main flow */
+
+    .flow-li:nth-child(n) .fade-up-animation.flow-caption{
+        animation-name: fadeDownAnimation;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-delay: 0s;
+    }
+}

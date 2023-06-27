@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COCO | 卓展2022</title>
+    <meta name="description" content="卓展2022 サービス開発卓「COCO」の特設サイトです。">
+
+    <!-- ogp -->
+    <meta property="og:url" content="https://coco-takuten2022.netlify.app/">
+    <meta property="og:title" content="卓展2022">
+    <meta property="og:image" content="https://coco-takuten2022.netlify.app/assets/images/coco_logo_box.png">
+    <meta property="og:description" content="卓展2022 サービス開発卓「COCO」の特設サイトです。">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="卓展2022">
+    <meta name="twitter:card" content="summary">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./static/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./static/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./static/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="./static/favicon_io/site.webmanifest">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css">
+    <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="./static/css/animation.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Noto Sans JP -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Quicksand -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+    <!-- Loader -->
+    <div id="loader">
+        <div id="loading">
+            <div class="loading-ellipse"></div>
+            <div class="loading-ellipse"></div>
+            <div class="loading-ellipse"></div>
+            <div class="loading-ellipse"></div>
+        </div>
+    </div>
+
+    <!-- header -->
+    <header id="header">
+        <h1>
+            <a href="#top"><img src="./static/images/coco.svg" alt="coco ロゴ" class="header-logo"></a>
+        </h1>
+        <nav id="nav">
+            <div class="nav-overlay phone tablet"></div>
+            <ul class="nav-list">
+                <li class="nav-li pc">
+                    <a href="#motto">Motto</a>
+                </li>
+                <li class="nav-li phone tablet">
+                    <a href="#motto">COCO's Motto</a>
+                </li>
+                <li class="nav-li pc">
+                    <a href="#flow">Flow</a>
+                </li>
+                <li class="nav-li phone tablet">
+                    <a href="#flow">UI Flow</a>
+                </li>
+                <li class="nav-li">
+                    <a href="#works">Works</a>
+                </li>
+                <li class="nav-li">
+                    <a href="#members">Members</a>
+                </li>
+                <li class="nav-li">
+                    <a href="#takumimi">Takumimi</a>
+                </li>
+                <li class="nav-li">
+                    <a href="#goods">Goods</a>
+                </li>
+                <li class="nav-li pc">
+                    <a href="https://geikou-takuten.com/" target="_blank" rel="noopener noreferrer"
+                        class="takuten-link">Takuten2022<span></span></a>
+                </li>
+                <li class="nav-li phone tablet">
+                    <a href="https://geikou-takuten.com/" target="_blank" rel="noopener noreferrer"
+                        class="takuten-link">卓展サイトTOPへ<span></span></a>
+                </li>
+            </ul>
+        </nav>
+        <!-- menu btn -->
+        <button class="menu-btn phone tablet">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+    <main id="main">
+        <section id="top">
+            <figure class="hero">
+                <div class="hero-img">
+                    <img src="./static/images/top.jpg" alt="TOP イメージ">
+                </div>
+                <figcaption class="hero-caption">
+                    <h1 class="hero-heading">
+                        みんなで楽しく<br>
+                        <span>〇</span><span>〇</span><span>〇</span><span>〇</span>なサービスを
+                    </h1>
+                    <p class="hero-sub-title">Takuten2022 ServiceDesign</p>
+                    <a href="#works" class="work-scroll btn">
+                        作品を見てみる
+                    </a>
+                </figcaption>
+            </figure>
+            <a href="#motto" class="motto-scroll">
+                <span class="pc phone">Scroll</span>
+                <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    id="motto-scroll-img">
+                    <circle cx="26" cy="26" r="24.75" stroke-width="2.5" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M25.9996 15.5225C26.3377 15.5225 26.662 15.6553 26.901 15.8918C27.1401 16.1283 27.2744 16.4491 27.2744 16.7835V31.3941L32.746 25.9791C32.8645 25.8619 33.0052 25.7689 33.1601 25.7054C33.3149 25.642 33.4809 25.6093 33.6485 25.6093C33.8162 25.6093 33.9821 25.642 34.137 25.7054C34.2919 25.7689 34.4326 25.8619 34.5511 25.9791C34.6696 26.0964 34.7637 26.2356 34.8278 26.3887C34.892 26.5419 34.925 26.7061 34.925 26.8719C34.925 27.0378 34.892 27.2019 34.8278 27.3551C34.7637 27.5083 34.6696 27.6475 34.5511 27.7648L26.9022 35.3311C26.7837 35.4485 26.6431 35.5417 26.4882 35.6053C26.3333 35.6688 26.1673 35.7016 25.9996 35.7016C25.8319 35.7016 25.6659 35.6688 25.511 35.6053C25.3561 35.5417 25.2154 35.4485 25.097 35.3311L17.4481 27.7648C17.3295 27.6475 17.2355 27.5083 17.1714 27.3551C17.1072 27.2019 17.0742 27.0378 17.0742 26.8719C17.0742 26.7061 17.1072 26.5419 17.1714 26.3887C17.2355 26.2356 17.3295 26.0964 17.4481 25.9791C17.6875 25.7423 18.0121 25.6093 18.3507 25.6093C18.5183 25.6093 18.6843 25.642 18.8391 25.7054C18.994 25.7689 19.1347 25.8619 19.2532 25.9791L24.7248 31.3941V16.7835C24.7248 16.4491 24.8591 16.1283 25.0982 15.8918C25.3372 15.6553 25.6615 15.5225 25.9996 15.5225Z" />
+                </svg>
+            </a>
+        </section>
+
+        <section class="section" id="motto">
+            <div class="section-heading">
+                <h1 class="section-title">COCO's Motto</h1>
+                <p class="section-description"></p>
+            </div>
+            <div class="section-content">
+                <h2 class="motto-heading">
+                    みんなで楽しく<br class="phone">話しながら<br
+                        class="pc"><span>〇</span><span>〇</span><span>〇</span><span>〇</span>な<br
+                        class="tablet phone">サービスを考えること
+                </h2>
+                <p class="motto-description">
+                    COCOはWebサイト制作組と<br class="phone">UIデザイン制作組で、<br class="tablet">共同で一つの<br class="phone">サービスを<br class="pc">考えるグループ制作の卓です。<br class="tablet phone">
+                    <span class="pc tablet">グループ内でもグループ外でも</span>お互いに<br class="pc tablet">フィードバックし合うことで、<br class="phone">より良いユーザー体験を<br class="tablet">意識した<br class="pc phone">サービス作りを目指します。<br class="tablet">
+                    <span class="pc tablet">最終的な成果物は主にアプリのプロトタイプと<br class="pc tablet">サービスのWEBサイトになります。</span>
+                </p>
+            </div>
+        </section>
+
+        <section class="section" id="flow">
+            <div class="section-heading">
+                <h1 class="section-title">UX Flow</h1>
+                <p class="section-description">
+                    UXデザインプロセスを用いてグループで<br class="phone">アイデアを練りました！<br>
+                    ここではサービスの体験価値が生まれるまでに<br class="phone">行った過程を説明します。
+                </p>
+            </div>
+            <div class="section-content">
+                <ol class="flow-list">
+                    <li class="flow-li">
+                        <figure id="flow1" class="flow">
+                            <div class="flow-img">
+                                <img src="./static/images/flow1.jpg" alt="Flow1 イメージ">
+                                <img src="./static/images/flow1_frame.svg" alt="Flow1 イメージ 枠">
+                            </div>
+                            <figcaption class="flow-caption">
+                                <span class="flow-number">
+                                    <span>UX Flow</span><span>01</span>
+                                </span>
+                                <h2 class="flow-title">アイデアの発散</h2>
+                                <p class="flow-description">
+                                    ブレインストーミングという手法を用いてみんなでキーワードに対するイメージや問題などを出し合ってアイデア出しを行いました。出てきた付箋の数はなんと30分で約400枚!!!
+                                </p>
+                            </figcaption>
+                        </figure>
+                    </li>
+
+                    <li class="flow-li">
+                        <figure id="flow2" class="flow">
+                            <div class="flow-img">
+                                <img src="./static/images/flow2.jpg" alt="Flow2 イメージ">
+                                <img src="./static/images/flow2_frame.svg" alt="Flow2 イメージ 枠">
+                            </div>
+                            <figcaption class="flow-caption">
+                                <span class="flow-number">
+                                    <span>UX Flow</span><span>02</span>
+                                </span>
+                                <h2 class="flow-title">ユーザー調査</h2>
+                                <p class="flow-description">
+                                    アイデアに対して予想で制作するのではなく、根拠を持った戦略を立てるために、アンケート手法による定量調査とインタビューを行いました。<br>
+                                    ユーザーがどんな悩みを抱えているのか探ります！
+                                </p>
+                            </figcaption>
+                        </figure>
+                    </li>
+
+                    <li class="flow-li">
+                        <figure id="flow3" class="flow">
+                            <div class="flow-img">
+                                <img src="./static/images/flow3.jpg" alt="Flow3 イメージ">
+                                <img src="./static/images/flow3_frame.svg" alt="Flow3 イメージ 枠">
+                            </div>
+                            <figcaption class="flow-caption">
+                                <span class="flow-number">
+                                    <span>UX Flow</span><span>03</span>
+                                </span>
+                                <h2 class="flow-title">調査分析/価値マップ作成</h2>
+                                <p class="flow-description">
+                                    KA法という手法でインタビューの結果を分析し、ユーザーが求めている本質的なニーズを考えどんなアイデアであれば解決になるのか考えました。
+                                </p>
+                            </figcaption>
+                        </figure>
+                    </li>
+
+                    <li class="flow-li">
+                        <figure id="flow4" class="flow">
+                            <div class="flow-img">
+                                <img src="./static/images/flow4.jpg" alt="Flow4 イメージ">
+                                <img src="./static/images/flow4_frame.svg" alt="Flow4 イメージ 枠">
+                            </div>
+                            <figcaption class="flow-caption">
+                                <span class="flow-number">
+                                    <span>UX Flow</span><span>04</span>
+                                </span>
+                                <h2 class="flow-title">課題決定/ペルソナ作成</h2>
+                                <p class="flow-description">
+                                    いままでの調査でわかったことをもとにペルソナとユーザーの利用ストーリーの作成をしました。<br>
+                                    グループ内で共通イメージを持ち、より明確なアイデア出しに繋げました。
+                                </p>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="section" id="works">
+            <div class="section-heading">
+                <h1 class="section-title">Works</h1>
+                <p class="section-description">
+                    各チームでサービスについての<br>
+                    アプリのプロトタイプとWebサイトを<br class="phone">制作しました。<br>
+                    <small>
+                        ※Webサイトに関してはPCでの閲覧をおすすめします！
+                    </small>
+                </p>
+            </div>
+            <div class="section-content">
+                <ul class="works-list">
+                    <li class="works-li">
+                        <article>
+                            <a href="./products/huekinori/index.html" class="work-link">
+                                <img src="./static/works_logo/ieinu_icon.svg" alt="いえいぬ アイコン" class="ieinu">
+                            </a>
+                            <h1 class="work-heading">
+                                <span class="team-name">team ふえきのり</span>
+                                <span class="service-name">いえいぬ</span>
+                            </h1>
+                        </article>
+                    </li>
+                    <li class="works-li">
+                        <article>
+                            <a href="./products/pikkoma/index.html" class="work-link">
+                                <img src="./static/works_logo/moglog_icon.svg" alt="moglog アイコン" class="moglog">
+                            </a>
+                            <h1 class="work-heading">
+                                <span class="team-name">team ピッコマ</span>
+                                <span class="service-name">moglog</span>
+                            </h1>
+                        </article>
+                    </li>
+                    <li class="works-li">
+                        <article>
+                            <a href="./products/agemonzu/index.html" class="work-link">
+                                <img src="./static/works_logo/fiiim_icon.svg" alt="fiiim アイコン" class="fiiim">
+                            </a>
+                            <h1 class="work-heading">
+                                <span class="team-name">team 揚げもンズ</span>
+                                <span class="service-name">fiiim</span>
+                            </h1>
+                        </article>
+                    </li>
+                    <li class="works-li">
+                        <article>
+                            <a href="./products/ichi/index.html" class="work-link">
+                                <img src="./static/works_logo/pure-fit_icon.svg" alt="pure-fit アイコン" class="pure-fit">
+                            </a>
+                            <h1 class="work-heading">
+                                <span class="team-name">team いち</span>
+                                <span class="service-name">PURE-FIT</span>
+                            </h1>
+                        </article>
+                    </li>
+                    <li class="works-li">
+                        <article>
+                            <a href="./products/touhuya/index.html" class="work-link">
+                                <img src="./static/works_logo/chattabi_icon.svg" alt="chattabi アイコン" class="chattabi">
+                            </a>
+                            <h1 class="work-heading">
+                                <span class="team-name">team とうふや</span>
+                                <span class="service-name">chattabi</span>
+                            </h1>
+                        </article>
+                    </li>
+                    <li class="works-li">
+                        <article>
+                            <a href="./products/parukuru/index.html" class="work-link">
+                                <img src="./static/works_logo/monotabi_icon.svg" alt="モノタビ アイコン" class="monotabi">
+                            </a>
+                            <h1 class="work-heading">
+                                <span class="team-name">team ぱるくる</span>
+                                <span class="service-name">モノタビ</span>
+                            </h1>
+                        </article>
+                    </li>
+                    <li class="works-li">
+                        <article>
+                            <a href="./products/daigokouen/index.html" class="work-link">
+                                <img src="./static/works_logo/16memo_icon.svg" alt="16memo アイコン" class="iromemo">
+                            </a>
+                            <h1 class="work-heading">
+                                <span class="team-name">team なかよし第五公園</span>
+                                <span class="service-name">16memo</span>
+                            </h1>
+                        </article>
+                    </li>
+                    <li class="works-li">
+                        <article>
+                            <a href="./products/kujira/index.html" class="work-link">
+                                <img src="./static/works_logo/kujira.jpg" alt="くじら アイコン" class="kujira">
+                            </a>
+                            <h1 class="work-heading">
+                                <span class="team-name">team くじら</span>
+                                <span class="service-name">くじら</span>
+                            </h1>
+                        </article>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section" id="members">
+            <div class="section-heading">
+                <h1 class="section-title">Members</h1>
+                <p class="section-description">
+                    個性あふれるCOCOのメンバー紹介です!
+                </p>
+            </div>
+            <div class="section-content swiper">
+                <h2 class="text-frame member-team-name" background-status="2">team ふえきのり</h2>
+                <div class="swiper-wrapper">
+                    <div class="member-group swiper-slide">
+                        <ul class="members-list pc">
+                            <li class="members-li">
+                                <figure class="member">
+                                    <div class="member-img">
+                                        <img src="./static/members/tumuji.jpg" alt="つむじ 写真">
+                                        <span class="course">Web</span>
+                                    </div>
+                                    <figcaption class="member-caption">
+                                        <p>2Nつむじ</p>
+                                        <p>土居夏緒</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="members-li">
+                                <figure class="member">
+                                    <div class="member-img">
+                                        <img src="./static/members/misen.jpg" alt="みーせん 写真">
+                                        <span class="course">Web</span>
+                                    </div>
+                                    <figcaption class="member-caption">
+                                        <p>1Mみーせん</p>
+                                        <p>香服部寿</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="members-li">
+                                <figure class="member">
+                                    <div class="member-img">
+                                        <img src="./static/members/bon.jpg" alt="ぼん 写真">
+                                        <span class="course">UI</span>
+                                    </div>
+                                    <figcaption class="member-caption">
+                                        <p>3Nぼん</p>
+                                        <p>井田帆南</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                        <img src="./static/members/huekinori.jpg" alt="ふえきのり グループメンバー写真" class="members-group-img tablet phone">
+                    </div>
+                    <div class="member-group swiper-slide">
+                        <ul class="members-list pc">
+                            <li class="members-li">
+                                <figure class="member">
+                                    <div class="member-img">
+                                        <img src="./static/members/tari.jpg" alt="たりー 写真">
+                                        <span class="course">Web</span>
+                                    </div>
+                                    <figcaption class="member-caption">
+                                        <p>3Mたりー</p>
+                                        <p>伊藤杏</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="members-li">
+                                <figure class="member">
+                                    <div class="member-img">
+                                        <img src="./static/members/toripi.jpg" alt="とりぴ 写真">
+                                        <span class="course">Web</span>
+                                    </div>
+                                    <figcaption class="member-caption">
+                                        <p>3Mとりぴ</p>
+                                        <p>松永玲奈</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="members-li">
+                                <figure class="member">
+                                    <div class="member-img">
+                                        <img src="./static/members/nekkoara.jpg" alt="ネッコアラ 写真">
+                                        <span class="course">UI</span>
+                                    </div>
+                                    <figcaption class="member-caption">
+                                        <p>3Mネッコアラ</p>
+                                        <p>福富千陽</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                        <img src="./static/members/pikkoma.jpg" alt="ピッコマ グループメンバー写真" class="members-group-img tablet phone">
+                    </div>
+                    <div class="member-group swiper-slide">
+                        <ul class="members-list pc">
+                            <li class="members-li">
+                                <figure class="member">
+                                    <div class="member-img">
+                                        <img src="./static/members/karaage.jpg" alt="からあげ 写真">
+                                        <span class="course">Web</span>
+                                    </div>
+                                    <figcaption class="member-caption">
+                                        <p>3Mからあげ</p>
+                                        <p>杉山友梨</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="members-li">
+                                <figure class="member">
+                                    <div class="member-img">
+                                        <img src="./static/members/suyon.jpg" alt="スヨン 写真">
+                                        <span class="course">Web</span>
+                                    </div>
+                                    <figcaption class="member-caption">
+                                        <p>3Mスヨン</p>
+                                        <p>中山愛唯</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="members-li">
+                                <figure class="member">
+                                    <div class="member-img">
+                                        <img src="./static/members/shaka.jpg" alt="シャカ 写真">
+                                        <span class="course">UI</span>
+                                    </div>
+                                    <figcaption class="member-caption">
+                                        <p>3Mシャカ</p>
+                                        <p>中村太哉</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                        <img src="./static/members/agemonzu.jpg" alt="揚げもンズ グループメンバー写真" class="members-group-img tablet phone">
+                    </div>
+                    <div class="member-group swiper-slide">
+                        <ul class="members-list pc">
+                            <li class="members-li">
+                                <figure class="member">
+                                    <div class="member-img">
+                                        <img src="./static/members/ichi.jpg" alt="いち 写真">
+                                        <span class="course">Web</span>
+                                    </div>
+                                    <figcaption class="member-caption">
+                                        <p>2Mいち</p>
+                                        <p>安田健人</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="members-li">
+                                <figure class="member">
+                                    <div class="member-img">
+                                        <img src="./static/members/roson_support.jpg" alt=" 写真">
+                                        <span class="course small-size">support</span>
+                                    </div>
+                                    <figcaption class="member-caption">
+                                        <p>4Mの卓長たち</p>
+                                        <p>ローソン他</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                        <img src="./static/members/iti.jpg" alt="いち グループメンバー写真" class="members-group-img tablet phone">
+                    </div>
+                    <div class="member-group swiper-slide">
+                        <ul class="members-list pc">
+                            <li class="members-li">
+                                <figure class="member">
+                                    <div class="member-img">
+                                        <img src="./static/members/tome.jpg" alt="とめ 写真">
+                                        <span class="course">Web</span>
+                                    </div>
+                                    <figcaption class="member-caption">
+                                        <p>3Mとめ</p>
+                                        <p>加賀美果歩</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="members-li">
+                                <figure class="member">
+                                    <div class="member-img">
+                                        <img src="./static/members/nigi.jpg" alt="にぎ 写真">
+                                        <span class="course">Web</span>
+                                    </div>
+                                    <figcaption class="member-caption">
+                                        <p>1Mにぎ</p>
+                                        <p>肥後琴楓</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="members-li">
+                                <figure class="member">
+                                    <div class="member-img">
+                                        <img src="./static/members/shakkotsu.jpg" alt="尺骨 写真">
+                                        <span class="course">UI</span>
+                                    </div>
+                                    <figcaption class="member-caption">
+                                        <p>1M尺骨</p>
+                                        <p>松田耀太朗</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                        <img src="./static/members/touhuya.jpg" alt="とうふや グループメンバー写真" class="members-group-img tablet phone">
+                    </div>
+                    <div class="member-group swiper-slide">
+                        <ul class="members-list pc">
+                            <li class="members-li">
+                                <figure class="member">
+                                    <div class="member-img">
+                                        <img src="./static/members/urayasuland.jpg" alt="浦安ランド 写真">
+                                        <span class="course">Web</span>
+                                    </div>
+                                    <figcaption class="member-caption">
+                                        <p>1N浦安ランド</p>
+                                        <p>竹内こころ</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="members-li">
+                                <figure class="member">
+                                    <div class="member-img">
+                                        <img src="./static/members/urano.jpg" alt="うらの 写真">
+                                        <span class="course">UI</span>
+                                    </div>
+                                    <figcaption class="member-caption">
+                                        <p>3Mうらの</p>
+                                        <p>上村那南果</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="members-li">
+                                <figure class="member">
+                                    <div class="member-img">
+                                        <img src="./static/members/touei.jpg" alt="トウ・エイ 写真">
+                                        <span class="course">UI</span>
+                                    </div>
+                                    <figcaption class="member-caption">
+                                        <p>1Nトウ・エイ</p>
+                                        <p>森井菜那子</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                        <img src="./static/members/parukuru.jpg" alt="パルクル グループメンバー写真" class="members-group-img tablet phone">
+                    </div>
+                    <div class="member-group swiper-slide">
+                        <ul class="members-list pc">
+                            <li class="members-li">
+                                <figure class="member">
+                                    <div class="member-img">
+                                        <img src="./static/members/ederin.jpg" alt="えでりん 写真">
+                                        <span class="course small-size">Front<br>end</span>
+                                    </div>
+                                    <figcaption class="member-caption">
+                                        <p>3Mえでりん</p>
+                                        <p>吉田果歩</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="members-li">
+                                <figure class="member">
+                                    <div class="member-img">
+                                        <img src="./static/members/peyo.jpg" alt="ぺよ 写真">
+                                        <span class="course small-size">Back<br>end</span>
+                                    </div>
+                                    <figcaption class="member-caption">
+                                        <p>3Mぺよ</p>
+                                        <p>磯野圭希</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="members-li">
+                                <figure class="member">
+                                    <div class="member-img">
+                                        <img src="./static/members/jiru.jpg" alt="ジル 写真">
+                                        <span class="course">Web</span>
+                                    </div>
+                                    <figcaption class="member-caption">
+                                        <p>3Mジル</p>
+                                        <p>石川弥幸</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="members-li">
+                                <figure class="member">
+                                    <div class="member-img">
+                                        <img src="./static/members/morikoro.jpg" alt="もりころ 写真">
+                                        <span class="course">UI</span>
+                                    </div>
+                                    <figcaption class="member-caption">
+                                        <p>3Mもりころ</p>
+                                        <p>永田芽生</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="members-li">
+                                <figure class="member">
+                                    <div class="member-img">
+                                        <img src="./static/members/sanpin.jpg" alt="さんぴん 写真">
+                                        <span class="course">UI</span>
+                                    </div>
+                                    <figcaption class="member-caption">
+                                        <p>3Mさんぴん</p>
+                                        <p>三品佳穂</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                        <img src="./static/members/daigokoen.jpg" alt="なかよし第五公園 グループメンバー写真" class="members-group-img tablet phone">
+                    </div>
+                    <div class="member-group swiper-slide">
+                        <ul class="members-list pc">
+                            <li class="members-li">
+                                <figure class="member">
+                                    <div class="member-img">
+                                        <img src="./static/members/kureka_support.jpg" alt="くれか 写真">
+                                        <span class="course small-size">support</span>
+                                    </div>
+                                    <figcaption class="member-caption">
+                                        <p>4Mくれか</p>
+                                        <p>岡美咲</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="members-li">
+                                <figure class="member">
+                                    <div class="member-img">
+                                        <img src="./static/members/hourensou.jpg" alt="ほうれん草 写真">
+                                        <span class="course small-size">Insta<br>llation</span>
+                                    </div>
+                                    <figcaption class="member-caption">
+                                        <p>1Nほうれん草</p>
+                                        <p>八十田実優</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="members-li">
+                                <figure class="member">
+                                    <div class="member-img">
+                                        <img src="./static/members/ramuko_support.jpg" alt="ラムこ 写真">
+                                        <span class="course small-size">support</span>
+                                    </div>
+                                    <figcaption class="member-caption">
+                                        <p>4Mラムこ</p>
+                                        <p>中村純実</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                        <img src="./static/members/kuzira.jpg" alt="くじら グループメンバー写真" class="members-group-img tablet phone">
+                    </div>
+                    <div class="member-group swiper-slide">
+                        <ul class="members-list pc">
+                            <li class="members-li">
+                                <figure class="member">
+                                    <div class="member-img">
+                                        <img src="./static/members/roson.jpg" alt="ローソン 写真">
+                                        <span class="course">Web</span>
+                                    </div>
+                                    <figcaption class="member-caption">
+                                        <p>4Mローソン</p>
+                                        <p>八森聖人</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="members-li">
+                                <figure class="member">
+                                    <div class="member-img">
+                                        <img src="./static/members/hoihoi.jpg" alt="ホイホイ 写真">
+                                        <span class="course">Web</span>
+                                    </div>
+                                    <figcaption class="member-caption">
+                                        <p>3Mホイホイ</p>
+                                        <p>赤堀祥</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="members-li">
+                                <figure class="member">
+                                    <div class="member-img">
+                                        <img src="./static/members/barihu.jpg" alt="ばりふ 写真">
+                                        <span class="course">Web</span>
+                                    </div>
+                                    <figcaption class="member-caption">
+                                        <p>3Mばりふ</p>
+                                        <p>杉原光</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="members-li">
+                                <figure class="member">
+                                    <div class="member-img">
+                                        <img src="./static/members/menmi.jpg" alt="めんみ 写真">
+                                        <span class="course">UI</span>
+                                    </div>
+                                    <figcaption class="member-caption">
+                                        <p>4Mめんみ</p>
+                                        <p>松下杏子</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="members-li">
+                                <figure class="member">
+                                    <div class="member-img">
+                                        <img src="./static/members/kureka.jpg" alt="くれか 写真">
+                                        <span class="course">UI</span>
+                                    </div>
+                                    <figcaption class="member-caption">
+                                        <p>4Mくれか</p>
+                                        <p>岡美咲</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="members-li">
+                                <figure class="member">
+                                    <div class="member-img">
+                                        <img src="./static/members/ramuko.jpg" alt="ラムこ 写真">
+                                        <span class="course">UI</span>
+                                    </div>
+                                    <figcaption class="member-caption">
+                                        <p>4Mラムこ</p>
+                                        <p>中村純実</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                        <img src="./static/members/yonensei.jpg" alt="卓長・サポーター グループメンバー写真" class="members-group-img tablet phone">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
+
+        <section class="section" id="takumimi">
+            <div class="section-heading">
+                <h1 class="section-title">Takumimi</h1>
+                <p class="section-description">
+                    卓長のくれかとローソンが、COCOのコンセプトや<br class="phone">作品についてトークしています。<br>
+                    作品を見ながら、ぜひお聴きください！
+                </p>
+            </div>
+            <div class="section-content">
+                <iframe src="https://open.spotify.com/embed/episode/2LHOzYae8M4MtScqV2Q858?utm_source=generator"
+                    width="100%" height="100%" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+                </iframe>
+            </div>
+        </section>
+
+        <section class="section" id="goods">
+            <div class="section-heading">
+                <h1 class="section-title">Goods</h1>
+                <p class="section-description">
+                    COCOのロゴを使った<br class="phone">かわいいグッズを販売しています。<br>
+                    ぜひご購入ください！
+                </p>
+            </div>
+            <div class="section-content">
+                <a href="https://suzuri.jp/70379770" class="goods-link text-frame btn" target="_blank"
+                    rel="noopener noreferrer">
+                    グッズを見る
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <a href="https://geikou-takuten.com/" target="_blank" rel="noopener noreferrer">
+            <img src="./static/images/takuten2022.svg" alt="卓展2022 ロゴ" />
+            <p class="takuten-link">卓展サイトTOPへ<span></span></p>
+        </a>
+        <small>
+            Takuten2022<br>
+            ServiceDesign
+        </small>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./static/js/script.js"></script>
+</body>
+
+</html>

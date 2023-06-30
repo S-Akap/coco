@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+/* base */
+
+@keyframes fadeInAnimation {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes loaderAnimation {
+    from {opacity: 1;}
+    to {opacity: 0;z-index: -1000;}
+}
+
+
+/* loader */
+
+#loader-logo>img {
+    animation: fadeInAnimation 0.5s forwards;
+}
+
+#loader.fin {
+    animation: loaderAnimation 1.5s forwards;
+
+}

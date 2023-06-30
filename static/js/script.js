@@ -9,7 +9,7 @@ function LoadingAnimation() {
     })
     loaderElm.classList.toggle("fin");
     window.setTimeout(HeroAnimation,1.0*1000);
-  },2 * 1000);
+  },3 * 1000);
 };
 
 // nav-menu

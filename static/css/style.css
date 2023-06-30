@@ -850,7 +850,7 @@ section {
 }
 
 .work-link:has(.kujira) {
-    filter: drop-shadow(0vw var(--size-03) var(--size-18) rgba(34, 21, 80, 0.2));
+    filter: drop-shadow(0vw var(--size-03) var(--size-18) rgba(34, 21, 80, 0.4));
 }
 
 /* main member */

@@ -15,10 +15,10 @@
 /* loader */
 
 #loader-logo>img {
-    animation: fadeInAnimation 0.5s forwards;
+    animation: fadeInAnimation 1.0s forwards;
 }
 
 #loader.fin {
-    animation: loaderAnimation 1.5s forwards;
+    animation: loaderAnimation 2.0s forwards;
 
 }
